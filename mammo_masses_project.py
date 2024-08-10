@@ -20,8 +20,6 @@
 # Although "shape" and "margin" are nominal data types, which sklearn typically doesn't deal with well, they are close enough to ordinal that we shouldn't just discard them. The "shape" for example is ordered increasingly from round to irregular.
 
 # ## Let's begin: prepare your data
-# 
-# Start by importing the mammographic_masses.data.txt file into a Pandas dataframe (hint: use read_csv) and take a look at it.
 
 # In[1]:
 

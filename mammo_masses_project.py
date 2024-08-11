@@ -83,7 +83,7 @@ feature_names = ['age', 'shape', 'margin', 'density']
 all_features
 
 
-# Some of our models require the input data to be normalized, so go ahead and normalize the attribute data. Hint: use preprocessing.StandardScaler().
+# Some of our models require the input data to be normalized, so normalizing the data using preprocessing.StandardScaler().
 
 # In[9]:
 
@@ -161,7 +161,7 @@ cv_scores.mean()
 
 # ## SVM
 # 
-# Next try using svm.SVC with a linear kernel. How does it compare to the decision tree?
+# Next try using svm.SVC with a linear kernel.
 
 # In[14]:
 
@@ -194,7 +194,6 @@ cv_scores = cross_val_score(clf, all_features_scaled, all_classes, cv=10)
 cv_scores.mean()
 
 
-# Choosing K is tricky, so we can't discard KNN until we've tried different values of K. Write a for loop to run KNN with K values ranging from 1 to 50 and see if K makes a substantial difference. Make a note of the best performance you could get out of KNN.
 
 # In[17]:
 
@@ -207,7 +206,7 @@ for n in range(1, 50):
 
 # ## Naive Bayes
 # 
-# Now try naive_bayes.MultinomialNB. How does its accuracy stack up?
+# Now try naive_bayes.MultinomialNB.
 
 # In[18]:
 
@@ -225,7 +224,7 @@ cv_scores.mean()
 
 # ## Revisiting SVM
 # 
-# svm.SVC may perform differently with different kernels. The choice of kernel is an example of a "hyperparamter." Try the rbf, sigmoid, and poly kernels and see what the best-performing kernel is. Do we have a new winner?
+# svm.SVC may perform differently with different kernels.
 
 # In[19]:
 
@@ -255,8 +254,6 @@ cv_scores.mean()
 
 
 # ## Logistic Regression
-# 
-# We've tried all these fancy techniques, but fundamentally this is just a binary classification problem. Try Logisitic Regression, which is a simple way to tackling this sort of thing.
 
 # In[22]:
 
@@ -269,8 +266,6 @@ cv_scores.mean()
 
 
 # ## Neural Networks
-# 
-# As a bonus challenge, let's see if an artificial neural network can do even better. You can use Keras to set up a neural network with 1 binary output neuron and see how it performs. Don't be afraid to run a large number of epochs to train the model if necessary.
 
 # In[23]:
 
